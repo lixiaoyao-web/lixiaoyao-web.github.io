@@ -189,7 +189,7 @@
       <li>
         <a href="/">
           
-          <i class="fas fa-bangumis" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-youtube" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span></span>
         </a>
@@ -365,7 +365,7 @@
 
                   <a href="/ " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-bangumis" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-youtube" style="position: absolute;left:50px" ></i>
 			      
 		          <span></span>
                   </a>
@@ -688,6 +688,41 @@
                     
 
                     
+
+                    
+                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;精彩视频
+    </div>
+    
+    <div class="row">
+		
+			<iframe src='//player.bilibili.com/player.html?aid=628159086&bvid=BV1gt4y1k7hu&cid=266190391&page=1' scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" align="middle"  style="height: 400px;" width="100%"> </iframe>
+		
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'false' === 'true',
+            theme: '#42b983',
+            loop: 'false' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: '',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
 
                     
 
