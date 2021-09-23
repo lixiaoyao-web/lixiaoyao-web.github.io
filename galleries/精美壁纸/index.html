@@ -27,137 +27,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-<style type="text/css" lang="css">
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-    
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-    
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-    
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-    
-   
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- </style>
- <script>
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },1000); 
-        },1000);//强制显示loading page 1s  
-    };
-    loaded();
-})()
- </script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="夙渊" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="夙渊" type="application/atom+xml">
 </head>
 
 
@@ -173,17 +43,7 @@
 
 
 
-
- <div id="loading-container">
-     <p class="loading-text">嘘～ 正在从服务器偷取页面 . . . </p> 
-     <div class="loading-image">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div> 
-         <div></div>
-     </div>
- </div><body>
+<body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -626,6 +486,27 @@
     </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/16.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/16.jpg"       alt=img/16.jpg>
     </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/17.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/17.jpg"       alt=img/17.jpg>
     </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/18.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/18.jpg"       alt=img/18.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/19.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/19.jpg"       alt=img/19.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/20.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/20.jpg"       alt=img/20.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/21.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/21.jpg"       alt=img/21.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/22.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/22.jpg"       alt=img/22.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/23.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/23.jpg"       alt=img/23.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/24.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/24.jpg"       alt=img/24.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/25.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/25.jpg"       alt=img/25.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/26.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/26.jpg"       alt=img/26.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/27.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/27.jpg"       alt=img/27.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/28.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/28.jpg"       alt=img/28.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/29.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/29.jpg"       alt=img/29.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/30.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/30.jpg"       alt=img/30.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/31.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/31.jpg"       alt=img/31.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/32.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/32.jpg"       alt=img/32.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/33.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/33.jpg"       alt=img/33.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/34.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/34.jpg"       alt=img/34.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/35.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/35.jpg"       alt=img/35.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/36.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/36.jpg"       alt=img/36.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/37.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/37.jpg"       alt=img/37.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/38.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/38.jpg"       alt=img/38.jpg>
+    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/39.jpg"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/39.jpg"       alt=img/39.jpg>
     </a>
             </div>
         
