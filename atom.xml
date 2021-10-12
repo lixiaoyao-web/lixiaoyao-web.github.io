@@ -6,7 +6,7 @@
   <link href="http://suyuanblog.xyz/atom.xml" rel="self"/>
   
   <link href="http://suyuanblog.xyz/"/>
-  <updated>2021-10-11T04:12:09.641Z</updated>
+  <updated>2021-10-12T17:01:08.376Z</updated>
   <id>http://suyuanblog.xyz/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WordPress 添加打赏、点赞、微海报和社交分享功能</title>
+    <link href="http://suyuanblog.xyz/2021/10/13/wordpress/"/>
+    <id>http://suyuanblog.xyz/2021/10/13/wordpress/</id>
+    <published>2021-10-12T16:46:45.000Z</published>
+    <updated>2021-10-12T17:01:08.376Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;很多WordPress用户搭建了自己的博客平台，希望可以为网站添加网站&lt;a href=&quot;https://www.suyuanblog.xyz/tags/&quot;&gt;打赏&lt;/a&gt;、文章&lt;a href=&quot;https://www.suyuanblog.xyz/tags/&quot;&gt;点赞&lt;/a&gt;、&lt;a href=&quot;https://www.suyuanblog.xyz/tags/&quot;&gt;微海报&lt;/a&gt;、和&lt;a href=&quot;https://www.suyuanblog.xyz/tags/&quot;&gt;社交分享&lt;/a&gt;功能，今天给大家推荐一下来自闪电博的博客社交分享组件插件，一起来学习吧。</summary>
+    
+    
+    
+    <category term="WordPress插件" scheme="http://suyuanblog.xyz/categories/WordPress%E6%8F%92%E4%BB%B6/"/>
+    
+    
+    <category term="打赏" scheme="http://suyuanblog.xyz/tags/%E6%89%93%E8%B5%8F/"/>
+    
+    <category term="点赞" scheme="http://suyuanblog.xyz/tags/%E7%82%B9%E8%B5%9E/"/>
+    
+    <category term="微海报" scheme="http://suyuanblog.xyz/tags/%E5%BE%AE%E6%B5%B7%E6%8A%A5/"/>
+    
+    <category term="社交分享" scheme="http://suyuanblog.xyz/tags/%E7%A4%BE%E4%BA%A4%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown快速入门基本语法（typora）</title>
     <link href="http://suyuanblog.xyz/2021/10/11/Markdown/"/>
     <id>http://suyuanblog.xyz/2021/10/11/Markdown/</id>
     <published>2021-10-11T03:59:20.000Z</published>
-    <updated>2021-10-11T04:12:09.641Z</updated>
+    <updated>2021-10-12T17:01:45.181Z</updated>
     
     
     <summary type="html">&lt;p&gt;javascript是一门充满活力、简单易用的语言，又是一门具有许多复杂微妙技术的语言。即使是经验丰富的javascript开发者，如果没有认真学习的话，也无法真正理解它们，这就是javascript的矛盾之处。由于javascript不必理解就可以使用，因此通常来说很难真正理解语言本身，这就是我们面临的挑战。不满足于只是让代码正常工作，而是想要弄清楚为什么，勇于挑战这条崎岖颠簸的少有人走的路，拥抱整个javascript&lt;/p&gt;</summary>
