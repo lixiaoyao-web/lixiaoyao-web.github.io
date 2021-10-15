@@ -740,14 +740,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-14
+                    2021-10-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    364
+                    361
                 </div>
                 
 
@@ -779,7 +779,7 @@
 </blockquote>
 <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>版本：hexo 3以上</p>
 <p>最近搭建hexo 博客文章时遇到了图片部署不显示的问题，如图：</p>
-<p><img src="/User/apple/blog/source/_posts/%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA/%E5%9B%BE1.png" alt="图1"></p>
+<p><img src="/2021/10/14/%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA/%E5%9B%BE1.png" alt="图1"></p>
 <p>上网找了很多方式都没有完美解决问题，后来查看了官方文档后终于解决了问题。建议大家以后遇到问题先去看看官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">https://hexo.io/zh-cn/docs</a></p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
 <li><p>在根目录下配置文件<code>_config.yml</code> 中有 <code>post_asset_folder:false改为true</code>。这样在建立文件时，<code>Hexo</code>会自动建立一个与文章同名的文件夹，这样就可以把与该文章相关的所有资源（图片）都放到那个文件夹里方便后面引用。如这里我放了一张test.jpg的图片。</p>
@@ -787,7 +787,7 @@
 <li><p>git bash安装插件：npm install <a target="_blank" rel="noopener" href="https://github.com/7ym0n/hexo-asset-image">https://github.com/7ym0n/hexo-asset-image</a> –save（这是个修改过的插件，经测试无问题），使用这个插件来引入图片，而不是网上那些方法里说的用传统md语法相对路径的方法。</p>
 </li>
 <li><p>插入图片时使用方式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述]（本地图片测试/test.jpg）</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述]（./文件名/test.jpg）</span><br></pre></td></tr></table></figure>
 
 
 
