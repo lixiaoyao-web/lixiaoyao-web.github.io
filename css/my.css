@@ -1,7 +1,7 @@
 // 鼠标样式
 *{
-    cursor: url("https://github.com/lixiaoyao-web/hexo-image/blob/main/image/cursor_1.ico"),auto!important;
+    cursor: url("/source/medias/cursor_1.ico"),auto!important;
 }
 :active{
-    cursor: url("https://github.com/lixiaoyao-web/hexo-image/blob/main/image/cursor_2.ico"),auto!important;
+    cursor: url("/source/medias/cursor_2.ico"),auto!important;
 }
