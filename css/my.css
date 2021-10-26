@@ -1,7 +1,7 @@
-/* Here is your custom css styles. */
+// 鼠标样式
 *{
-    cursor: url("/medias/mouse.ico"),auto!important;
+    cursor: url("https://github.com/lixiaoyao-web/hexo-image/blob/main/image/cursor_1.ico"),auto!important;
 }
 :active{
-    cursor: url("/medias/mouse.ico"),auto!important;
+    cursor: url("https://github.com/lixiaoyao-web/hexo-image/blob/main/image/cursor_2.ico"),auto!important;
 }
