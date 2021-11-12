@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>Docker 安装青龙面板+机器人控制</title>
+      <link href="/2021/11/12/docker/"/>
+      <url>/2021/11/12/docker/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>作者：夙愿君</p></blockquote><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul><li>VPS一台 </li><li>SSH终端工具</li></ul><h3 id="在VPS上安装Docker"><a href="#在VPS上安装Docker" class="headerlink" title="在VPS上安装Docker"></a>在VPS上安装Docker</h3><p>在这里我选择阿里云 Ubuntu系统上面安装Docker,当然任何Docker平台都是可以的，比如群晖、威联通、Unraid…</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#使用官方安装脚本自动安装</span><br><span class="line">curl -fsSL https:<span class="comment">//get.docker.com | bash -s docker --mirror Aliyun</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">安装完Docker后，正式开始安装青龙面板</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">docker pull whyour/qinglong</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure><p>docker run -dit <br>   -v $PWD/ql/config:/ql/config <br>   -v $PWD/ql/log:/ql/log <br>   -v $PWD/ql/db:/ql/db <br>   -p 5700:5700 <br>   –name qinglong <br>   –hostname qinglong <br>   –restart always <br>   whyour/qinglong:latest</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初次访问 http://&lt;自己ip&gt;:5700,使用 admin/adminadmin 登陆，提示已初始化密码</span><br><span class="line"></span><br><span class="line">去自己映射目录config下找 auth.json，查看里面的 password</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>docker exec -it qinglong cat /ql/config/auth.json</p><p>拉取脚本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it qinglong ql repo https://github.com/curtinlv/JD-Script.git </span><br><span class="line"></span><br><span class="line">docker exec -it qinglong ql repo https://github.com/he1pu/JDHelp.git &quot;jd_|jx_|getJDCookie&quot; &quot;activity|backUp|Coupon&quot; &quot;^jd[^_]|USER&quot;</span><br><span class="line"></span><br><span class="line">docker exec -it qinglong ql repo https://github.com/panghu999/jd_scripts.git &quot;jd_|jx_|getJDCookie&quot; &quot;activity|backUp|Coupon|jd_try|format_&quot; &quot;^jd[^_]|USER&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="安装花语面板"><a href="#安装花语面板" class="headerlink" title="安装花语面板"></a>安装花语面板</h3><p>我们需要一个获取cookie的工具，这里使用花语和青龙来配合使用</p><ul><li>下载好相应的JDC文件</li><li>把JDC上传到青龙目录 /ql下</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo -i（获取root权限）</span><br><span class="line">cd /root/ql（进入青龙文件夹路径）</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>chmod 777 JDC<br>./JDC</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><p>vi config.toml</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">nohup ./JDC</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 安装机器人</span><br><span class="line"></span><br><span class="line">* 在botfather申请token  2009987606:AAF4AHMF7s6J3SBLwB8PX-ScOPvep3mcqD0</span><br><span class="line">* 获取userid                    1787435656</span><br><span class="line">* Api  id        </span><br><span class="line">* hash</span><br><span class="line"></span><br><span class="line">在config文件中把toStartBot=&quot;&quot;改为&quot;ture&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>docker exec -it qinglong ql bot</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 青龙面板 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 系统介绍 </tag>
+            
+            <tag> 搭建流程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>软路由入门指南</title>
+      <link href="/2021/11/12/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+      <url>/2021/11/12/%E8%BD%AF%E8%B7%AF%E7%94%B1/</url>
+      
+        <content type="html"><![CDATA[<p>在互联网时代，家庭网络带宽速度飞速地提升，家庭中的智能移动设备越来越多，智能家居设备也开始逐渐地普及，于是家里的路由器需承载的负荷也越来越大。不过，普通的路由器越来越难满足现阶段的家庭需求，软路由因此登上了舞台。</p><blockquote><p>作者：夙愿君</p></blockquote><h2 id="什么是软路由？"><a href="#什么是软路由？" class="headerlink" title="什么是软路由？"></a>什么是软路由？</h2><p>就像计算机有软件和硬件的区别，路由器也有「软」「硬」之分。通常我们在各个电商平台上搜索「路由器」这三个关键词所得到的几乎所有商品都属于硬路由，它是由路由器厂商基于自行开发或是开源的嵌入式设备操作系统，根据特定的硬件设备，设计出来的传统硬件设备。而与之对应的软路由，是基于软件工具在普通的硬件上来实现传统路由器的功能。<strong>我们可以在旧电脑、工控机、开发板、服务器甚至是硬件虚拟机中安装软路由系统，然后通过强大的软件实现各种各样的功能。</strong></p><h2 id="软路由的优缺点"><a href="#软路由的优缺点" class="headerlink" title="软路由的优缺点"></a>软路由的优缺点</h2><p>相比于硬路由，软路由的优势非常明显。<strong>首先，软路由的价格更加便宜。</strong>具备强大性能和多种功能的高端硬路由的价格动辄上千，而用软路由来实现同样的效果可能只需要二三百来块钱，这差价我们可以用来升级我们的网络带宽或干其它更有意义的事情；<strong>其次，软路由的性能更强大。</strong>与传统硬路由的MIPS、ARM 平台处理器不同，软路由常使用的 X86/64 处理器有着更强劲的性能，带得动更多的插件。同时软路由可以配备更好的网卡，也保证了网络的稳定和更多设备的接入；<strong>最后，软路由的功能更加多样。</strong>配合丰富的软件生态，我们能在软路由上实现更多有趣的功能，比如离线下载、去广告、QOS、流量控制、多线路控制、链路负载均衡等，甚至可以根据自己的需求自行开发软件。</p><p>当然，有利必有弊，软路由也不是万能的，它也有一些缺点。<strong>首先，软路由的功耗更高。</strong>软路由因为硬件规格更高，所以它的功耗自然也就增加了，平均功率要比硬路由高 10-20W；<strong>其次，软路由的无线信号略逊。</strong>软路由在无线 WiFi 这个方面和硬路由可以说是云泥之别，硬路由有厂商专门设计的电路板布局、独立的 WiFi 信号放大装置、防止电子信号干扰的屏蔽罩等等，这些都是软路由不具备的配置；<strong>最后，软路由的学习成本更高。</strong>硬路由在厂商的多年开发设计下，各种操作配置趋向简易化，通过傻瓜式的操作我们就能完成基本的配置。而对于软路由来说，如果没有一点的网络基础和学习实践能力，并非所有人都能驾驭。</p><h2 id="什么情况下选择软路由？"><a href="#什么情况下选择软路由？" class="headerlink" title="什么情况下选择软路由？"></a>什么情况下选择软路由？</h2><p>软路由确实很强大，但是也要结合自身情况来判断是否值得投入时间和精力。那么，我们该怎么判断自己是否需要软路由呢？我总结了以下条件：</p><ul><li><p>你的宽带最好高于 100M，如果你是「小水管」的带宽，还是优先考虑升级带宽</p></li><li><p>最好是独立租（住）房，如果是和比较熟悉的人合租房也可以，毕竟你要改造住房的网络，否则可能引起不必要的麻烦</p></li><li><p>需要有其他的无线 AP 或者硬路由来充当 WiFi 无线功能</p></li><li><p>家里的网络设备以及对网络的需求较复杂的人，比如有 P2P 下载、在线视频、在线游戏、访问海外资源、精准的流量控制、家中有大量的联网设备等</p></li></ul><h2 id="软路由硬件"><a href="#软路由硬件" class="headerlink" title="软路由硬件"></a>软路由硬件</h2><p>软路由硬件可以是普通的家用电脑、服务器，也可以是特殊的设备，比如树莓派、Nano Pi、斐讯N1盒子等ARM架构设备等。</p><h2 id="软路由部署配置"><a href="#软路由部署配置" class="headerlink" title="软路由部署配置"></a>软路由部署配置</h2><p>有了硬件之后，我们需要给它注入灵魂 —— 安装软路由系统。软路由系统可谓是百花齐放，可供选择的系统非常多，下面列举一些国内外常用的。</p><ul><li><a href="https://mikrotik.com/software">RouterOS</a> 是非常有名的付费系统，授权费用很低，但是功能和性能都异常强大。上至宽带运营商，下到家庭和网吧都会使用他，功能非常齐全，网络上的教程很多，但是学习成本很高，适合有技术基础的人使用</li><li><a href="https://www.pfsense.org/">PFsense</a> 是一款免费的软路由系统，在路由器的基础上还集成了强大的防火墙功能。包括入侵检测、漏洞扫描等模块，配置起来比较繁琐，但是深度研究后可以成为你的家庭安全网关</li><li><a href="https://www.ikuai8.com/">爱快路由系统</a> 是国内公司开发的免费产品，基本的路由功能都有，家庭使用没有问题，但是系统本身比较偏向比企业管理向，也有不少开发者针对这个系统开发了许多实用的插件</li><li><a href="https://openwrt.org/">OpenWRT/LEDE</a> 在国内的家庭软路由中有着非常高的占有率，拥有海量的软件，和非常强大的生态。同时，OpenWRT 的教程也很丰富详实，这里我推荐使用 <a href="https://firmware.koolshare.cn/LEDE_X64_fw867/">KoolShare 固件</a>，内置了非常强大的插件市场</li></ul><h2 id="家用软路由方案推荐"><a href="#家用软路由方案推荐" class="headerlink" title="家用软路由方案推荐"></a>家用软路由方案推荐</h2><p>首先我们需要一个硬件来安装软路由，如果你有闲置的电脑，可以直接使用电脑来安装，如果你没有，或是出于耗电的考虑需要搭建一个专门的软路由系统。那么可以在网上购买特定的设备，以价格便宜的两款常见ARM软路由来举例：</p><ul><li>NanoPi R2C、R2S、R4S</li><li>Raspberry Pi (树莓派)</li><li>斐讯N1 盒子</li><li>HK1 box电视盒子</li></ul><h2 id="软路由安装OpenWrt系统-R2S"><a href="#软路由安装OpenWrt系统-R2S" class="headerlink" title="软路由安装OpenWrt系统-R2S"></a>软路由安装OpenWrt系统-R2S</h2><ol><li>通过上面的链接下载好相应的固件，并准备好R2S和一张空的TF卡。</li><li>使用<a href="https://www.balena.io/etcher/">balenaEtcher</a>将固件刷入到卡里。</li><li>插电，开机，如果硬路由的网关和软路由冲突，需要提前单独设置软路由，即将电脑和软路由直连，先设置好网卡地址，然后再连接主网。</li><li>R2S可以作为<strong>主路由</strong>(主要负责拨号)或者<strong>旁路由</strong>两种方式。不同的方式用不同的接线方法，主路由需要用到WAN口和LAN口，其中WAN口直接连接光猫，LAN口连接交换机或AP，旁路由只需要将LAN口连接到内网任意网口就行。</li><li>在浏览器输入配置好的管理页面地址<a href="http://192.168.1.1/">http://192.168.1.1</a>，账号<code>root</code>，默认密码<code>password</code>进入OpenWrt路由配置界面。</li><li>SD扩容可见<a href="https://mlapp.cn/1011.html">SD卡分区扩容指南</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软路由 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 使用教程 </tag>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 产品介绍 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>WordPress 添加打赏、点赞、微海报和社交分享功能</title>
       <link href="/2021/10/14/wordpress01/"/>
       <url>/2021/10/14/wordpress01/</url>
