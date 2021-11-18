@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Docker 安装青龙面板+机器人控制, ‘suyuanblog 计算机 大数据 数据挖掘’">
+    <meta name="keywords" content="软路由家庭网络配置方式——（主路由）, ‘suyuanblog 计算机 大数据 数据挖掘’">
     <meta name="description" content="本科 ｜计算机科学与技术｜大数据">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Docker 安装青龙面板+机器人控制 | 夙渊</title>
+    <title>软路由家庭网络配置方式——（主路由） | 夙渊</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/libs/materialize/materialize.min.css">
@@ -623,12 +623,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Docker 安装青龙面板+机器人控制</h1>
+                    <h1 class="description center-align post-title">软路由家庭网络配置方式——（主路由）</h1>
                 </div>
             </div>
         </div>
@@ -744,12 +744,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/">
-                                <span class="chip bg-color">系统介绍</span>
+                            <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                                <span class="chip bg-color">软路由</span>
                             </a>
                         
-                            <a href="/tags/%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/">
-                                <span class="chip bg-color">搭建流程</span>
+                            <a href="/tags/openwrt/">
+                                <span class="chip bg-color">openwrt</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8F%8C%E7%BD%91%E5%8D%A1/">
+                                <span class="chip bg-color">双网卡</span>
                             </a>
                         
                     </div>
@@ -760,8 +764,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF/" class="post-category">
-                                青龙面板
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="post-category">
+                                网络配置
                             </a>
                         
                     </div>
@@ -773,28 +777,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-12
+                    2021-11-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-15
+                    2021-11-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    455
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -814,35 +818,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>青龙面板与大家熟知的宝塔面板类似，可以通过此面板安装各类脚本实现自己的各种想法。最近这款面板十分火热，在这里给大家分享一种功能，通过docker搭载实现安装青龙面板，并且实现自动化设置，这里就不废话了，直接上教程！</p>
+                <p>软路由作为一种网络辅助工具，如今在许多场所中都有所涉及。今天给大家主要介绍的是，软路由在家庭网络中的配置方式。家庭网络配置的方式主要分为三种：主路由、单臂路由、旁路由。这三种配置方式各自有优缺点，所能实现的功能也不尽相同。软路由家庭网络所选择的配置方式因人而异，同时也要依据软路由自身的硬件配置，才能选择最佳的网络配置方式。话不多说，下面开始教程。</p>
 <blockquote>
 <p>作者：夙渊君</p>
 </blockquote>
-<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
-<li>VPS一台 </li>
-<li>SSH终端工具</li>
-</ul>
-<h3 id="在VPS上安装Docker"><a href="#在VPS上安装Docker" class="headerlink" title="在VPS上安装Docker"></a>在VPS上安装Docker</h3><p>在这里我选择阿里云 Ubuntu系统上面安装Docker,当然任何Docker平台都是可以的，比如群晖、威联通、Unraid…</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#使用官方安装脚本自动安装</span><br><span class="line">curl -fsSL https:<span class="comment">//get.docker.com | bash -s docker --mirror Aliyun</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">安装完Docker后，正式开始安装青龙面板</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">docker pull whyour/qinglong</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></tbody></table></figure>
-<p>docker run -dit <br>   -v $PWD/ql/config:/ql/config <br>   -v $PWD/ql/log:/ql/log <br>   -v $PWD/ql/db:/ql/db <br>   -p 5700:5700 <br>   –name qinglong <br>   –hostname qinglong <br>   –restart always <br>   whyour/qinglong:latest</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">初次访问 http://&lt;自己ip&gt;:5700,使用 admin/adminadmin 登陆，提示已初始化密码</span><br><span class="line"></span><br><span class="line">去自己映射目录config下找 auth.json，查看里面的 password</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p>docker exec -it qinglong cat /ql/config/auth.json</p>
-<p>拉取脚本</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it qinglong ql repo https://github.com/curtinlv/JD-Script.git </span><br><span class="line"></span><br><span class="line">docker exec -it qinglong ql repo https://github.com/he1pu/JDHelp.git "jd_|jx_|getJDCookie" "activity|backUp|Coupon" "^jd[^_]|USER"</span><br><span class="line"></span><br><span class="line">docker exec -it qinglong ql repo https://github.com/panghu999/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp|Coupon|jd_try|format_" "^jd[^_]|USER"</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="安装花语面板"><a href="#安装花语面板" class="headerlink" title="安装花语面板"></a>安装花语面板</h3><p>我们需要一个获取cookie的工具，这里使用花语和青龙来配合使用</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>开始配置的前提是，你首先需要有一台软路由。市场上的软路由依据自身的硬件配置，自身的价格也有所不同。如今市场有许多矿渣设备，这些都可以作为一台实用的软路由，其实，X86架构的绝大多数CPU的性能应付路由器的功能是绰绰有余的。但是我们使用软路由，往往不只是完成路由器的本职工作，还有使用各种各样的插件！所以，对于CPU而言，除了核心数量和频率，我们更需要关注这三个特性：是否支持AES指令、虚拟化以及定向虚拟化技术，这三项特性对软路由而言非常重要。之前在我的上一篇<a target="_blank" rel="noopener" href="https://www.suyuanblog.xyz/2021/11/12/%E8%BD%AF%E8%B7%AF%E7%94%B1/">《软路由入门指南》</a>博文中就已经系统的提到了软路由的诸多设备。本篇文章主要以NanoPi R2S、斐讯N1 盒子这两种如今流行的设备进行讲解。以这两台设备作对比，是因为其自身的硬件设备有所不同，主要区别在其网口数量的不同。</p>
+<h2 id="软路由作为主路由"><a href="#软路由作为主路由" class="headerlink" title="软路由作为主路由"></a>软路由作为主路由</h2><p>顾名思义，软路由充当了主路由器，实现了在软路由设备上拨号上网和DHCP等功能。设备配置过程中网线的连接方式为：光猫的LAN口–软路由的WAN口；软路由的LAN口–WIFI-无线AP的LAN口。</p>
+<p><img src="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/02.JPG" alt="软路由作为主路由器">实现这些功能之前需要进入你家的宽带光猫的后台（一般光猫的后台登录地址为：192.168.1.1，光猫背面有说明），将光猫的路由模式改为桥接模式。</p>
+<p><img src="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/01.jpg" alt="路由模式改为桥接模式"></p>
+<p>随后，进入到软路由后台openwrt系统中，在网络–接口进行设置。<img src="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/03.jpg"></p>
+<p>注意事项：</p>
 <ul>
-<li>下载好相应的JDC文件</li>
-<li>把JDC上传到青龙目录 /ql下</li>
+<li><p>接口–LAN–基础设置一栏中</p>
+</li>
+<li><p>IPv4地址：192.168.1.188 默认即可</p>
+</li>
+<li><p>IPv4 子网掩码：255.255.255.0</p>
+</li>
+<li><p>IPv4网关： 不用填写</p>
+</li>
+<li><p>DNS: 114.114.114.114 / 114.114.115.115</p>
+</li>
 </ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo -i（获取root权限）</span><br><span class="line">cd /root/ql（进入青龙文件夹路径）</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p>chmod 777 JDC<br>./JDC</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p>vi config.toml</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">nohup ./JDC</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 安装机器人</span><br><span class="line"></span><br><span class="line">* 在botfather申请token  2009987606:AAF4AHMF7s6J3SBLwB8PX-ScOPvep3mcqD0</span><br><span class="line">* 获取userid                    1787435656</span><br><span class="line">* Api  id        </span><br><span class="line">* hash</span><br><span class="line"></span><br><span class="line">在config文件中把toStartBot=""改为"ture"</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p>docker exec -it qinglong ql bot</p>
+<p><img src="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/05.jpg" alt="开启DHCP服务"></p>
+<p>物理设置里面取消桥接接口，保存应用。（这里就不上图了<span class="github-emoji" style="display:inline;vertical-align:middle"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>）</p>
+<h3 id="在网络接口页面中点击“添加新接口”"><a href="#在网络接口页面中点击“添加新接口”" class="headerlink" title="在网络接口页面中点击“添加新接口”"></a>在网络接口页面中点击“添加新接口”</h3><ul>
+<li><p>名称：WAN</p>
+</li>
+<li><p>新接口的协议：PPPoE</p>
+</li>
+<li><p>接口：eth1</p>
+</li>
+<li><p>提交后再填写宽带账号和密码</p>
+<p><img src="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/06.jpg" alt="添加接口并设置"></p>
+</li>
+</ul>
+<h2 id="无线路由器设置为AP模式（Tenda路由器）"><a href="#无线路由器设置为AP模式（Tenda路由器）" class="headerlink" title="无线路由器设置为AP模式（Tenda路由器）"></a>无线路由器设置为AP模式（Tenda路由器）</h2><ul>
+<li><p>步骤1: 将路由器的四个LAN口其中之一与电脑连接起来</p>
+</li>
+<li><p>步骤2: 打开浏览器，在地址栏中输入路由器的管理地址192.168.0.1进入管理界面。(账号密码一般为admin)</p>
+</li>
+<li><p>步骤3: 在无线路由器管理界面，点击“系统管理”，将启用DHCP服务器前面的“✅”去掉</p>
+<p><img src="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/07.jpg" alt="DHCP服务关闭"></p>
+</li>
+<li><p>步骤4: 点击“上网设置”，将里面的联网方式选为静态IP模式。其他设置请看图片</p>
+<p><img src="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/08.jpg" alt="联网方式"></p>
+</li>
+<li><p>步骤5: 将无线路由器的四个LAN口之一连接到软路由设备中。LAN口——LAN口即可：</p>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>软路由作为主路由的网络配置方式，是最为普遍的一种，采用这种方式，在硬件上设备需要两个网口，Nano Pi R2S 刚好满足，软路由作为主路由：一方面，光猫处于桥接模式，软路由为PPPoE模式，少了一次数据转发（NAT），提高了网络响应速度，充分利用了软路由强大的性能。另一方面，能够发挥出硬路由器强大的信号覆盖能力，可以说是最完美的软路由家庭组网解决方案。而作为单网口的斐讯N1盒子，如果想成为主路由，只能在其usb2.0的插口处，使用自行购买的网卡，但是因为usb2.0的原因，实测网速不是太理想。如果大家不想购买网卡却又想实现主路由的上网方式，其实还是有解决方法的，那么便采用另一种方式，如本文开头提到的单臂路由的组网方式。想获悉配置方式尽情观看我的另一篇关于单臂路由的讲解，谢谢<span class="github-emoji" style="display:inline;vertical-align:middle"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> </p>
 
                 
             </div>
@@ -869,7 +894,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://suyuanblog.xyz/2021/11/12/docker/">http://suyuanblog.xyz/2021/11/12/docker/</a>
+                    <a href="http://suyuanblog.xyz/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">http://suyuanblog.xyz/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -907,12 +932,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/">
-                                    <span class="chip bg-color">系统介绍</span>
+                                <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                                    <span class="chip bg-color">软路由</span>
                                 </a>
                             
-                                <a href="/tags/%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/">
-                                    <span class="chip bg-color">搭建流程</span>
+                                <a href="/tags/openwrt/">
+                                    <span class="chip bg-color">openwrt</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8F%8C%E7%BD%91%E5%8D%A1/">
+                                    <span class="chip bg-color">双网卡</span>
                                 </a>
                             
                         </div>
@@ -1350,9 +1379,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
@@ -1370,9 +1400,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1385,6 +1415,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1411,13 +1442,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/12/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                <a href="/2021/11/12/docker/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="软路由入门指南">
+                        <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="Docker 安装青龙面板+机器人控制">
                         
-                        <span class="card-title">软路由入门指南</span>
+                        <span class="card-title">Docker 安装青龙面板+机器人控制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1434,8 +1465,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/" class="post-category">
-                                    软路由
+                            <a href="/categories/%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF/" class="post-category">
+                                    青龙面板
                                 </a>
                             
                             
@@ -1445,16 +1476,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">使用教程</span>
+                    <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/">
+                        <span class="chip bg-color">系统介绍</span>
                     </a>
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">网络</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">
-                        <span class="chip bg-color">产品介绍</span>
+                    <a href="/tags/%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/">
+                        <span class="chip bg-color">搭建流程</span>
                     </a>
                     
                 </div>
