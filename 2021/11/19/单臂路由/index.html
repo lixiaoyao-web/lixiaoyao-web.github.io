@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="‘suyuanblog 计算机 大数据 数据挖掘’">
+    <meta name="keywords" content="软路由家庭网络配置——（二）, ‘suyuanblog 计算机 大数据 数据挖掘’">
     <meta name="description" content="本科 ｜计算机科学与技术｜大数据">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>夙渊</title>
+    <title>软路由家庭网络配置——（二） | 夙渊</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/libs/materialize/materialize.min.css">
@@ -623,12 +623,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">软路由家庭网络配置——（二）</h1>
                 </div>
             </div>
         </div>
@@ -742,12 +742,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/openwrt/">
+                                <span class="chip bg-color">openwrt</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/">
+                                <span class="chip bg-color">旁路由</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/">
+                                <span class="chip bg-color">单臂路由</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/" class="post-category">
+                                软路由
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -756,28 +777,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-12
+                    2021-11-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-12
+                    2021-11-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    29
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -797,7 +818,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title: 个人空间<br>data: 2021-9-22 0:02:50<br>type: “gallery”<br>layout: “gallery”<br>password: af1ec85a8b79b38552ed3952c4c7fc5beeb52f76b2994480770050aa70ba6f02<br>img: “<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/16.jpg&quot;">https://cdn.jsdelivr.net/gh/lixiaoyao-web/blog-image/img/16.jpg"</a></p>
+                <p>话接上篇，前文主要给大家讲述了软路由作为主路由的配置方式，不同的硬件设备可能所导致家庭网络配置的方式都不尽相同，以单网口的设备为例，若要充当主路由，在缺少一个网口的情况下，必须外接一个网卡。常见的单网口设备为：斐讯N1 盒子、玩客云、HK 盒子、RaspberryPi 等，单网口设备若想实现类似主路由的功能，那么便请看下面的内容，话不多说，直接上教程。<span class="github-emoji" style="display:inline;vertical-align:middle"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<blockquote>
+<p>作者：夙渊君</p>
+</blockquote>
+<h2 id="软路由作为单臂路由"><a href="#软路由作为单臂路由" class="headerlink" title="软路由作为单臂路由"></a>软路由作为单臂路由</h2><p>此网络配置方式的原理与软路由作为主路由的配置方式有些类似，只是将软路由的连接位置与无线路由AP互换。家庭光猫处于桥接模式，功能只是把光信号转换成电信号，可以方便进行其他网络相关操作，而且可以减少因为光猫问题造成的网络性能瓶颈，家庭网络故障。软路由实现拨号上网、IP地址分配（DHCP）的功能，充分利用了软路由强大的性能。设备配置过程中网线的连接方式：光猫的LAN口——WIFI无线AP 的LAN口——软路由的LAN、WAN口，因为这里的软路由只有一个网口，那么我们便将这个同时设置为LAN和WAN口，这样便实现了软路由作为主路由的功能。</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/01.jpg" alt="单臂路由模式"></p>
+<h3 id="网络配置流程"><a href="#网络配置流程" class="headerlink" title="网络配置流程"></a>网络配置流程</h3><ul>
+<li><p>设备准备好后，首先用网线将软路由和电脑连接，输入在电脑端浏览中输入软路由的后台登录地址。</p>
+</li>
+<li><p>在软路由的管理界面（192.168.1.188），点击“网络–接口–修改”，进行软路由LAN口的基本设置与物理设置</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/02.jpg" alt="LAN口设置"></p>
+</li>
+<li><p>物理设置一栏中，要将桥接模式前面的“✅”取消</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/05.jpg" alt="桥接关闭"></p>
+</li>
+<li><p>高级设置那一栏，将DHCP服务开启（由软路由分配IP地址）</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/03.jpg" alt="开启DHCP服务"></p>
+</li>
+<li><p>设置完LAN口，在“网络–接口”界面点击“添加新接口”，设置软路由的WAN口，接入点选择“eth0”</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/04.jpg" alt="创建WAN口"></p>
+</li>
+<li><p>保存并应用，这个时候我们还是无法上网，因为还有一个防火墙需要设置，“网络–防火墙–WAN”的区域到转发还是REJECT,点击这边规则右边的修改</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/08.jpg" alt="防火墙WAN口修改"></p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/07.jpg" alt="基本设置"></p>
+</li>
+<li><p>随后将家里的光猫和无线路由器的DHCP关闭，并且将无线路由的工作模式改为AP模式</p>
+</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>软路由通过这种网络配置方式便可实现作为主路由的功能，受限于设备只有一个网口，这种配置方式必将使得网络响应速度下降。配置方式应人而已，不同的方式所得到的结果也不尽相同，下面给大家介绍家庭网络配置最快捷的网络配置方式。<span class="github-emoji" style="display:inline;vertical-align:middle"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<h2 id="软路由作为旁路由"><a href="#软路由作为旁路由" class="headerlink" title="软路由作为旁路由"></a>软路由作为旁路由</h2><p>最后这种网络配置方式，简单快捷，特别适合小白用户，无需将家里的网络进行变动，只需将无线路由器的LAN口与软路由（N1盒子）的LAN口相连，家庭光猫处于桥接模式并且开启DHCP功能，便可实现家庭科学上网的功能。<br><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/01.jpg" alt="旁路由模式"></p>
+<h3 id="网络配置流程-1"><a href="#网络配置流程-1" class="headerlink" title="网络配置流程"></a>网络配置流程</h3><ul>
+<li><p>首先将软路由与电脑通过网线相连（也可以通过软路由自身的无线连接），输入软路由的初始IP地址。</p>
+</li>
+<li><p>在软路由的管理界面（192.168.1.188），点击“网络–接口–修改”，进行软路由LAN口的基本设置与物理设置</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/12.jpg"></p>
+</li>
+<li><p>物理设置一栏中，要将桥接模式前面的“✅”取消</p>
+</li>
+<li><p>高级设置那一栏，将DHCP服务关闭（由家庭光猫分配IP地址）</p>
+<p><img src="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/13.jpg"></p>
+</li>
+<li><p>最后保存并应用，这样便可实现所需功能</p>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>软路由相关的家庭网络配置到这里便全部介绍完毕了，这几种方式各有千秋，采取哪种配置方式主要取决于你的软路由设备，还有你是否有一颗爱折腾的心，相信通过这两篇文章大家对软路由的设置应该有了全面的设置，感谢大家的观看，🙏 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 
                 
             </div>
@@ -824,7 +889,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://suyuanblog.xyz/galleries/%E4%B8%AA%E4%BA%BA%E7%A9%BA%E9%97%B4/index.html">http://suyuanblog.xyz/galleries/%E4%B8%AA%E4%BA%BA%E7%A9%BA%E9%97%B4/index.html</a>
+                    <a href="http://suyuanblog.xyz/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/">http://suyuanblog.xyz/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -861,7 +926,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/openwrt/">
+                                    <span class="chip bg-color">openwrt</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/">
+                                    <span class="chip bg-color">旁路由</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/">
+                                    <span class="chip bg-color">单臂路由</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1302,13 +1379,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/galleries/%E4%B8%AA%E4%BA%BA%E7%A9%BA%E9%97%B4/index.html">
+                <a href="/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="软路由家庭网络配置——（二）">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">软路由家庭网络配置——（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1319,17 +1396,37 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            夙渊君
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E8%B7%AF%E7%94%B1/" class="post-category">
+                                    软路由
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/openwrt/">
+                        <span class="chip bg-color">openwrt</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/">
+                        <span class="chip bg-color">旁路由</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/">
+                        <span class="chip bg-color">单臂路由</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1337,16 +1434,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/galleries/%E4%B8%AA%E4%BA%BA%E7%A9%BA%E9%97%B4/index.html">
+                <a href="/2021/11/18/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="https://cdn.jsdelivr.net/gh/lixiaoyao-web/lixiaoyao-web.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="软路由家庭网络配置方式——（主路由）">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">软路由家庭网络配置方式——（主路由）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1357,17 +1454,36 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            夙渊君
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    网络配置
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/openwrt/">
+                        <span class="chip bg-color">openwrt</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                        <span class="chip bg-color">软路由</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8F%8C%E7%BD%91%E5%8D%A1/">
+                        <span class="chip bg-color">双网卡</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
