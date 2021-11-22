@@ -6,7 +6,7 @@
   <link href="http://suyuanblog.xyz/atom.xml" rel="self"/>
   
   <link href="http://suyuanblog.xyz/"/>
-  <updated>2021-11-22T09:41:50.940Z</updated>
+  <updated>2021-11-22T09:48:30.375Z</updated>
   <id>http://suyuanblog.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://suyuanblog.xyz/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/"/>
     <id>http://suyuanblog.xyz/2021/11/19/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/</id>
     <published>2021-11-19T01:55:10.000Z</published>
-    <updated>2021-11-22T09:41:50.940Z</updated>
+    <updated>2021-11-22T09:48:30.375Z</updated>
     
     
       
@@ -66,9 +66,9 @@
     <category term="网络配置" scheme="http://suyuanblog.xyz/categories/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"/>
     
     
-    <category term="openwrt" scheme="http://suyuanblog.xyz/tags/openwrt/"/>
-    
     <category term="软路由" scheme="http://suyuanblog.xyz/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    
+    <category term="openwrt" scheme="http://suyuanblog.xyz/tags/openwrt/"/>
     
     <category term="双网卡" scheme="http://suyuanblog.xyz/tags/%E5%8F%8C%E7%BD%91%E5%8D%A1/"/>
     
